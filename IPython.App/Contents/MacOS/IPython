@@ -1,0 +1,7 @@
+#!/opt/local/Library/Frameworks/Python.framework/Versions/2.6/Resources/Python.app/Contents/MacOS/Python
+ 
+import os
+exectutable = '/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/ipython'
+arguments = [exectutable, 'qtconsole', '--pylab']
+os.environ["PYTHONPATH"]=os.getenv("PYTHONPATH", "")
+os.execve(exectutable, arguments, os.environ)
